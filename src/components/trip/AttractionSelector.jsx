@@ -16,7 +16,7 @@ export default function AttractionSelector({ attractions, selected, onToggle }) 
           >
             <span
               className={`w-6 h-6 rounded-md flex items-center justify-center shrink-0 ${
-                isSelected ? "bg-brand-500 text-surface-900" : "border border-white/30"
+                isSelected ? "bg-brand-500 text-surface-900" : "border border-black/30"
               }`}
             >
               {isSelected && <FaCheck size={12} />}

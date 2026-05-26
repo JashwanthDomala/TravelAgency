@@ -91,7 +91,7 @@ export default function DestinationPage() {
             <h2 className="text-2xl font-semibold mb-4">Must Visit</h2>
             <ul className="space-y-2">
               {destination.mustVisit.map((place) => (
-                <li key={place} className="glass rounded-lg px-4 py-3 text-slate-300">
+                <li key={place} className="glass rounded-lg px-4 py-3 text-slate-500">
                   {place}
                 </li>
               ))}

@@ -48,7 +48,7 @@ export default function HeroSection() {
             trigger: containerRef.current,
             start: "top top",
             end: "bottom bottom",
-            scrub: 0.6,
+            scrub: 3,
             invalidateOnRefresh: true,
             onUpdate: (self) => {
               scrollProgress.current = self.progress;
@@ -56,11 +56,7 @@ export default function HeroSection() {
           },
         });
 
-        tl.to(
-          globeWrapRef.current,
-          { scale: 0.55, y: 60, opacity: 0.25, ease: "none" },
-          0
-        )
+        tl.to(globeWrapRef.current, {}, 0)
           .to(contentRef.current, { y: -80, opacity: 0, ease: "none" }, 0)
           .to(stickyRef.current, { filter: "blur(0px)" }, 0);
       }, containerRef);
@@ -93,7 +89,12 @@ export default function HeroSection() {
         ref={stickyRef}
         className="sticky top-20 h-[calc(100vh-5rem)] w-full overflow-hidden flex items-center justify-center"
       >
-        <div ref={globeWrapRef} className="hero-globe-wrap absolute inset-0 z-0 will-change-transform">
+        <div ref={globeWrapRef} className="
+          hero-globe-wrap
+          absolute inset-0 z-0
+          will-change-transform
+          flex items-center justify-center
+        ">
           <HeroScene mouseRef={mouseRef} scrollProgress={scrollProgress} />
         </div>
 
@@ -104,16 +105,16 @@ export default function HeroSection() {
           <p className="hero-intro-item text-brand-500 text-sm uppercase tracking-[0.3em] mb-4 font-medium">
             Premium Group Travel
           </p>
-          <h1 className="hero-intro-item heading-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-5 gradient-text">
+          <h1 className="hero-intro-item heading-display text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-5 gradient-text">
             Explore Incredible India
           </h1>
           <p className="hero-intro-item text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-8">
             Personalized group trips crafted for unforgettable journeys.
           </p>
 
-          <div className="hero-intro-item max-w-xl mx-auto mb-8">
-            <DestinationSearch variant="hero" />
-          </div>
+          {/* <div className="hero-intro-item relative z-50 max-w-xl mx-auto">
+              <DestinationSearch variant="hero" />
+          </div> */}
 
           <div className="hero-intro-item flex flex-wrap justify-center gap-4 mb-10">
             <Button to="/#destinations">Start Exploring</Button>

@@ -70,7 +70,7 @@ export default function DestinationSearch({ variant = "hero", className = "" }) 
   const isHero = variant === "hero";
 
   return (
-    <div ref={wrapperRef} className={`relative ${className}`}>
+    <div ref={wrapperRef} className={`relative ${className}` }>
       <form onSubmit={handleSubmit} className="relative">
         <HiSearch
           className={`absolute left-4 top-1/2 -translate-y-1/2 text-brand-500 ${isHero ? "w-5 h-5" : "w-4 h-4"}`}
@@ -110,7 +110,8 @@ export default function DestinationSearch({ variant = "hero", className = "" }) 
           role="listbox"
           className={`absolute z-50 w-full mt-2 glass-strong rounded-2xl overflow-hidden border border-brand-500/15 shadow-2xl ${
             isHero ? "max-h-80" : "max-h-64"
-          } overflow-y-auto`}
+          } overflow-y-auto` }
+          onWheel={(e) => e.stopPropagation()}
         >
           {results.map((dest, i) => (
             <li key={dest.id} role="option" aria-selected={i === activeIndex}>

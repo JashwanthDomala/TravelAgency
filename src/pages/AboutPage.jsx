@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <div ref={ref} className="section-padding max-w-4xl mx-auto">
       <h1 className="heading-display text-4xl font-bold mb-6">About TripCraft India</h1>
-      <div className="prose prose-invert space-y-4 text-slate-400">
+      <div className="prose prose-invert space-y-4 text-slate-500">
         <p>
           TripCraft India is a premium travel-tech platform built to help groups discover, customize, and book unforgettable journeys across India — from the beaches of Goa to the peaks of Ladakh.
         </p>

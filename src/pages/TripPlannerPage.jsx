@@ -98,7 +98,7 @@ function PlannerContent() {
           ← {destination.name}
         </Link>
         <h1 className="heading-display text-3xl md:text-5xl font-bold mt-2">Smart Trip Planner</h1>
-        <p className="text-slate-400 mt-2">{apiNote}</p>
+        <p className="text-slate-500 mt-2">{apiNote}</p>
       </div>
 
       <div className="mb-8">
@@ -110,7 +110,7 @@ function PlannerContent() {
           <section>
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold">Recommended Hotels</h2>
-              <label className="text-sm text-slate-400">
+              <label className="text-sm text-slate-500">
                 Travelers{" "}
                 <select
                   value={travelers}
@@ -168,7 +168,7 @@ function PlannerContent() {
         </div>
 
         <aside className="relative lg:self-start">
-          <div className="space-y-6 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:overscroll-contain">
+          <div className="space-y-6 z-10 lg:sticky lg:top-28 lg:max-h-[calc(100vh)] lg:overflow-y-auto lg:overscroll-contain " onWheel={(e) => e.stopPropagation()}>
             <PriceBreakdown pricing={pricing} />
             <div className="glass rounded-2xl p-6">
               <h3 className="font-semibold mb-2">Trip Summary</h3>
