@@ -34,10 +34,12 @@ export const destinations = [
     id: "kashmir",
     name: "Kashmir",
     slug: "kashmir",
-    image: "https://images.unsplash.com/photo-1595815771619-48337f9f8a0e?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?w=800&q=80",
+
     gallery: [
-      "https://images.unsplash.com/photo-1595815771619-48337f9f8a0e?w=1200&q=80",
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80",
+      "https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?w=1200&q=80",
+      "https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=1200&q=80",
     ],
     description: "Paradise on earth — dal lakes, houseboats, and snow-capped Himalayan valleys.",
     budget: 45000,
@@ -90,9 +92,11 @@ export const destinations = [
     id: "kerala",
     name: "Kerala",
     slug: "kerala",
-    image: "https://images.unsplash.com/photo-1602219506557-aa8d1e1e8b0e?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=800&q=80",
+
     gallery: [
-      "https://images.unsplash.com/photo-1602219506557-aa8d1e1e8b0e?w=1200&q=80",
+      "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=1200&q=80",
     ],
     description: "Backwaters, Ayurveda, tea plantations, and lush tropical greenery.",
     budget: 35000,
@@ -142,9 +146,11 @@ export const destinations = [
     id: "manali",
     name: "Manali",
     slug: "manali",
-    image: "https://images.unsplash.com/photo-1624397640148-949b1732bb93?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80",
+
     gallery: [
-      "https://images.unsplash.com/photo-1624397640148-949b1732bb93?w=1200&q=80",
+      "https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&q=80",
     ],
     description: "Himalayan hill station with adventure sports and scenic valleys.",
     budget: 28000,
@@ -201,7 +207,8 @@ export const featuredTrips = [
     destinations: ["Delhi", "Agra", "Jaipur"],
     duration: "6 days",
     price: 32999,
-    image: "https://images.unsplash.com/photo-1524492412937-280b9d812304?w=800&q=80",
+      image:
+    "https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?w=800&q=80",
     tag: "Bestseller",
   },
   {
@@ -211,7 +218,8 @@ export const featuredTrips = [
     destinations: ["Chennai", "Pondicherry", "Madurai"],
     duration: "8 days",
     price: 41999,
-    image: "https://images.unsplash.com/photo-1582979512210-9999f2940d0c?w=800&q=80",
+    image:
+      "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800",
     tag: "Culture",
   },
   {
@@ -253,11 +261,25 @@ export const testimonials = [
   },
 ];
 
+
 export const galleryImages = [
-  "https://images.unsplash.com/photo-1524492412937-280b9d812304?w=600&q=80",
-  "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80",
-  "https://images.unsplash.com/photo-1595815771619-48337f9f8a0e?w=600&q=80",
+  
+  // Jaipur Palace
   "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&q=80",
+
+  // Jaipur
+  "https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?w=600&q=80",
+
+  // Goa
+  "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80",
+
+  // Kashmir
+  "https://images.pexels.com/photos/5205097/pexels-photo-5205097.jpeg?auto=compress&cs=tinysrgb&w=600",
+
+
+  // Rishikesh
   "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
-  "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80",
+
+  // Ladakh
+  "https://images.pexels.com/photos/574313/pexels-photo-574313.jpeg?auto=compress&cs=tinysrgb&w=600",
 ];
