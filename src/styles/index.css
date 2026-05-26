@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+
+  /* TripCraft palette */
+  --color-brand-50: #FBF5DD;
+  --color-brand-100: #E7E1B1;
+  --color-brand-200: #DDD8A8;
+  --color-brand-400: #306D29;
+  --color-brand-500: #0D530E;
+  --color-brand-600: #0B480C;
+  --color-brand-700: #093D0A;
+  --color-brand-800: #073208;
+  --color-cream: #FBF5DD;
+  --color-peach: #E7E1B1;
+  --color-surface-900: #FBF5DD;
+  --color-surface-800: #E7E1B1;
+  --color-surface-700: #DDD8A8;
+  --color-surface-600: #306D29;
+  --color-accent-cyan: #306D29;
+  --color-accent-violet: #306D29;
+}
+
+@layer base {
+  :root {
+    --nav-height: 5rem;
+    --tc-primary: #0D530E;
+    --tc-accent: #306D29;
+    --tc-cream: #FBF5DD;
+    --tc-peach: #E7E1B1;
+  }
+
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    background-color: var(--tc-cream);
+    color: var(--tc-primary);
+    @apply font-sans overflow-x-hidden;
+  }
+
+  ::selection {
+    background-color: rgba(48, 109, 41, 0.35);
+    color: #073208;
+  }
+
+  input[type="date"] {
+    color-scheme: light;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(251, 245, 221, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(13, 83, 14, 0.12);
+    box-shadow: 0 8px 32px rgba(13, 83, 14, 0.08);
+  }
+
+  .glass-strong {
+    background: rgba(251, 245, 221, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(13, 83, 14, 0.15);
+    box-shadow: 0 4px 24px rgba(13, 83, 14, 0.1);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-500 via-brand-400 to-brand-500 bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-20 md:py-28;
+  }
+
+  .heading-display {
+    font-family: var(--font-display);
+  }
+
+  .text-muted {
+    color: rgba(13, 83, 14, 0.72);
+  }
+
+  .input-field {
+    @apply w-full rounded-xl px-4 py-3 text-sm border border-brand-500/20 bg-white/80 text-brand-800;
+    @apply focus:outline-none focus:ring-2 focus:ring-brand-400/50 focus:border-brand-500;
+  }
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.hero-scroll-container {
+  isolation: isolate;
+}
+
+.hero-globe-wrap {
+  transform-origin: center center;
+}
+
+#destinations {
+  scroll-margin-top: calc(var(--nav-height) + 1rem);
+}
+
+.skeleton {
+  @apply animate-pulse bg-brand-500/10 rounded-lg;
+}
