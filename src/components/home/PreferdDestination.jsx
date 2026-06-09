@@ -39,7 +39,7 @@ export default function PreferredDestination() {
       });
 
         // Construct the prompt based on user input
-        const prompt = `I want to go on a ${formData.travelType} trip. I will be traveling as a ${formData.groupType} around ${formData.date}. Can you recommend 2 great destinations and give a brief 1-sentence reason for each? Keep it concise.`;
+        const prompt = `I want to go on a ${formData.travelType} trip. I will be traveling as a ${formData.groupType} around ${formData.date}. Can you recommend 2 great destinations and give a brief 1-sentence reason for each? Keep it concise.I am from india `;
 
         // Call the API with streaming enabled AND the required chatRequest wrapper
         const stream = await openrouter.chat.send({
